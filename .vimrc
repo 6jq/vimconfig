@@ -35,6 +35,6 @@ endif
 set nobackup
 
 "set foldenable
-"set foldmethod=syntax
+set foldmethod=syntax
 
 execute pathogen#infect()
