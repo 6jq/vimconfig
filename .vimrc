@@ -27,14 +27,15 @@ if has("gui_running")
 	set guioptions-=r
 	set guioptions-=l
 	set mouse-=a
-	set guifont=Monaco\ 10
-	colorscheme colorful256
+	set guifont=consolas
+	colorscheme developer
 	set t_Co=256
 endif
 
 set nobackup
 
 "set foldenable
-set foldmethod=syntax
+"set foldmethod=syntax
 
 execute pathogen#infect()
+
