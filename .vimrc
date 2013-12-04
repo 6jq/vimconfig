@@ -35,6 +35,9 @@ if has("gui_running")
 	set t_Co=256
 	set lines=38
 	set columns=120
+	set laststatus=2
+	"customize status line
+	set statusline=\ [%{&ff}\ -\ %{strlen(&fenc)?&fenc:'none'}]\ [%n]\ %y\ %r\ %1*%m%*%w%=%(Column:\ %c%)%4(%)%-10(Line:\ %l%)\ %4(%)%p%%\ \ \ \ \ ASCII=%b\ HEX=%B\ 
 endif
 
 set nobackup
@@ -42,7 +45,8 @@ set nobackup
 "set foldenable
 "set foldmethod=syntax
 
-set tags+=./tags,~/.vim/tags/cpp
+set tags+=./tags
+set tags+=~/.vim/tags/cpp
 set omnifunc=syntaxcomplete#Complete
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 

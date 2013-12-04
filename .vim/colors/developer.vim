@@ -64,4 +64,5 @@ hi NonText        ctermfg=2                                         gui=NONE
 hi VertSplit                                                        gui=NONE  cterm=NONE term=NONE 
 hi MatchParen     ctermfg=0 ctermbg=3 guibg=#335EA8
 hi User1                                                            gui=bold  cterm=bold
-hi Normal guibg=#ffd7b3
+hi Normal guibg=#f7f3b6
+hi StatusLine guifg=#4b8df9 guibg=#000000
