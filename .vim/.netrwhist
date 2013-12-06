@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/lube'
 let g:netrw_dirhist_2='/home'
 let g:netrw_dirhist_3='/home/lube'
 let g:netrw_dirhist_4='/home/lube/.vim'
+let g:netrw_dirhist_5='/home/lube'
+let g:netrw_dirhist_6='/home/lube/cc'
+let g:netrw_dirhist_7='/home/lube'
+let g:netrw_dirhist_8='/home/lube/Desktop'
