@@ -18,6 +18,7 @@ set nobackup
 "encodings
 set fileencodings=utf-8,gb18032,gbk
 set termencoding=utf-8,gb18030
+set t_Co=256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -33,15 +34,14 @@ if has("gui_running")
 				\set guioptions+=m <Bar>
 				\endif<CR>
 	set mouse-=a
-	set guifont=consolas
-	colorscheme developer
-	set t_Co=256
+	set guifont=Monaco
+	colorscheme molokai
 	set lines=38
 	set columns=120
 	set laststatus=2
 	"customize status line
 	set statusline=\ [%{&ff}\ -\ %{strlen(&fenc)?&fenc:'none'}]\ [%n]\ %y\ %r\ %1*%m%*%w%=%(Column:\ %c%)%4(%)%-10(Line:\ %l%)\ %4(%)%p%%\ \ \ \ \ ASCII=%b\ HEX=%B\ 
-	hi StatusLine guifg=#4b8df9 guibg=#000000
+	hi StatusLine guifg=#007bcd guibg=#ffffff
 endif
 
 map <C-F12> :! ctags -R .<CR>
