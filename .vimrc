@@ -40,8 +40,6 @@ if has("gui_running")
 	set columns=120
 	set laststatus=2
 	"customize status line
-	set statusline=\ [%{&ff}\ -\ %{strlen(&fenc)?&fenc:'none'}]\ [%n]\ %y\ %r\ %1*%m%*%w%=%(Column:\ %c%)%4(%)%-10(Line:\ %l%)\ %4(%)%p%%\ \ \ \ \ ASCII=%b\ HEX=%B\ 
-	hi StatusLine guifg=#007bcd guibg=#ffffff
 endif
 
 map <C-F12> :! ctags -R .<CR>
