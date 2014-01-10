@@ -4,6 +4,7 @@ set nocp
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
+filetype on
 filetype plugin indent on
 syntax on
 set nu
@@ -15,6 +16,8 @@ set paste
 set history=50
 set scrolloff=4
 set nobackup
+set nowrap
+set wildmenu
 "encodings
 set fileencodings=utf-8,gb18032,gbk
 set termencoding=utf-8,gb18030
@@ -34,18 +37,17 @@ if has("gui_running")
 				\set guioptions+=m <Bar>
 				\endif<CR>
 	set mouse-=a
-	set guifont=Monaco
+	set guifont=YaHei\ Consolas\ Hybrid\ 11.5
 	colorscheme molokai
 	set lines=38
 	set columns=120
 	set laststatus=2
-	"customize status line
 endif
 
 map <C-F12> :! ctags -R .<CR>
 
-"set foldenable
-"set foldmethod=syntax
+set foldmethod=syntax
+set nofoldenable
 
 set tags+=~/.vim/tags
 let g:clang_auto_select=1
