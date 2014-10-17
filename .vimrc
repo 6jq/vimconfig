@@ -65,7 +65,7 @@ set completeopt=longest,menu
 	func! CompileRun()
 		if &ft == 'cpp'
 			exec "w"
-			exec "! clang++ -Wall % -o a.out -std=c++11 && ./a.out"
+			exec "! clang++ -Wall % -o a.out --std=c++11 && ./a.out"
 		endif
 		if &ft == 'c'
 			exec "w"
