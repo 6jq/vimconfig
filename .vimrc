@@ -45,6 +45,10 @@ if has("gui_running")
 endif
 
 map <C-F12> :! ctags -R .<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 set foldmethod=syntax
 set nofoldenable
@@ -58,18 +62,18 @@ let g:clang_periodic_quickfix=1
 let g:clang_snippets=0
 let g:clang_close_preview=1
 let g:clang_use_library=1
-let g:clang_user_options='-std=c++11'
+let g:clang_user_options='--std=c++11'
 set completeopt=longest,menu 
 
 "<F5>编译和运行程序{
 	func! CompileRun()
 		if &ft == 'cpp'
 			exec "w"
-			exec "! clang++ -Wall % -o a.out --std=c++11 && ./a.out"
+			exec "! clang++ -Weverything % -o a.out --std=c++11 && ./a.out"
 		endif
 		if &ft == 'c'
 			exec "w"
-			exec "! clang -Wall % -o a.out && ./a.out"
+			exec "! clang -Weverything % -o a.out && ./a.out"
 		endif
 	endfunc
 	map <F5> :call CompileRun()<CR>
