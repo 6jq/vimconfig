@@ -78,3 +78,15 @@ set completeopt=longest,menu
 	endfunc
 	map <F5> :call CompileRun()<CR>
 "}
+
+"emmet {
+	let g:user_emmet_install_global = 0
+	autocmd FileType html,css EmmetInstall
+"}
+
+"nerdtree {
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+	map <C-b> :NERDTreeToggle<CR>
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"}
